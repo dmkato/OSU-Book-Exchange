@@ -27,7 +27,7 @@
 	$dbhost = 'oniddb.cws.oregonstate.edu';
 	$dbname = 'katod-db';
 	$dbuser = 'katod-db';
-	$dbpass = 'M5HicuWk97lzsYqV';
+	$dbpass = '51NzgxrL5yIY2fdv';
 		
 	//Connect
 	$mysqli = new mysqli($dbhost, $dbname, $dbpass, $dbuser);
