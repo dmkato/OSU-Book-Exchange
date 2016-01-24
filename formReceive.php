@@ -1,6 +1,6 @@
 <?php include("_header.php");?>
 
-<h1>Saving your submission...</h1>
+<h3>Saving your submission...</h3>
 
 <?php
 
@@ -22,9 +22,9 @@ if ($stmt = $mysqli->prepare("insert into tbList(id,tbTitle,tbAuthor,isbn,crn) v
 
 ?>
 
-<p><a href="./dataEntry.php">Do another...</a></p>
+<div class="panel panel-default"><div class="panel-body"><a href="./dataEntry.php">Do another...</a></div></div>
 
-<p><a href="./dataDisplay.php">View results...</a></p>
+<div class="panel panel-default"><div class="panel-body"><a href="./dataDisplay.php">View results...</a></div></div>
 
 
 <?php include("_footer.php");?>
