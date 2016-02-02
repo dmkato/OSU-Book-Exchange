@@ -21,6 +21,7 @@ if (checkAuth(true) != "") {
 				
 	<input type="submit" class="btn btn-default"></div>
 </form></br>
+
 <?php		
 } else {
 	printf("Error: %s\n", $mysqli->error);

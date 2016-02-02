@@ -6,6 +6,7 @@
 <?php
 
 if ($stmt = $mysqli->prepare("insert into tbList(id,tbTitle,tbAuthor,isbn,crn) values(?,?,?,?,?)")) {
+	//o
     $id = $_REQUEST["id"];
     $tbTitle = $_REQUEST["tbTitle"];
     $tbAuthor = $_REQUEST["tbAuthor"];

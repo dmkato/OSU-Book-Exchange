@@ -12,5 +12,7 @@
 	<h3>Login</h3></br>
 
 	<div class="panel panel-default"><div class="panel-body">You're Logged in as <?php echo "$onidid"; ?></div></div>
+	
+	<!-- Add Logout Button-->
 
 <?php include("_footer.php");?>

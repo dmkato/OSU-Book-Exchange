@@ -74,3 +74,8 @@ function checkAuth($doRedirect) {
 	if ($mysqli->connect_error) {
 		echo "Cannot connect to database.\n";
 	}
+
+
+
+
+
