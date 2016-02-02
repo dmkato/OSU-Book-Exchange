@@ -1,3 +1,4 @@
+<?php $headerTitle = "Textbook Site || Textbook Recieved!"; ?>
 <?php include("_header.php");?>
 
 <h3>Saving your submission...</h3>

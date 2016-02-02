@@ -1,5 +1,8 @@
 <!doctype html>
-	<?php $homeNav = 'active'; ?>
+<?php 
+	$headerTitle = "Textbook Site || Home";
+	$homeNav = "active";
+?>
 	<?php include("_header.php");?>
 		<h3>Coming soon!</h3></br>
 		</main>

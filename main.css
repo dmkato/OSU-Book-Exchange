@@ -1,7 +1,15 @@
 
 body{padding:10px;}
 title{font-family:sans-serif;}
-.bodyText{color:#00FF00;}
+
+a{
+    color: #ff9833;
+} 
+
+a:hover{
+    color: #705050;
+}
+
 thead{
-	background-color: lightBlue;
+	background-color: #ffb266;
 }
