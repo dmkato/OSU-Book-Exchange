@@ -7,7 +7,8 @@
     $onidid = checkAuth(true);
 		
 	//Check For Onid ID in SQL to Retrieve account info
-	
+    print_r($_SESSION);
+    
 	?>
 	<h3>Login</h3></br>
 

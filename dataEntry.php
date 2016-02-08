@@ -11,7 +11,7 @@ if (checkAuth(true) != "") {
 		
 	<form method="post" action="formReceive.php">
 		<div class="form-group"><label>Textbook Title:</label>
-			<input type="text" class="form-control" name="tbName"></div>
+			<input type="text" class="form-control" name="tbTitle"></div>
 		<div class="form-group"><label>Textbook Author:</label>
 			<input type="text" class="form-control" name="tbAuthor"></div>
 		<div class="form-group"><label>ISBN:</label>
@@ -24,7 +24,7 @@ if (checkAuth(true) != "") {
 
 <?php		
 } else {
-	printf("Error: %s\n", $mysqli->error);
+	printf("Please log in", $mysqli->error);
 }	
 ?>	
 <?php include("_footer.php");?>

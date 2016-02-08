@@ -4,17 +4,17 @@
 <h3>Saving your submission...</h3>
 
 <?php
+    $onidid = checkAuth(true);
 
-if ($stmt = $mysqli->prepare("insert into tbList(id,tbTitle,tbAuthor,isbn,crn) values(?,?,?,?,?)")) {
-	//o
-    $id = $_REQUEST["id"];
+if ($stmt = $mysqli->prepare("insert into tbList(tbTitle,tbAuthor,isbn,crn, userName) values(?,?,?,?,?)")) {
+	//Set Vars
     $tbTitle = $_REQUEST["tbTitle"];
     $tbAuthor = $_REQUEST["tbAuthor"];
     $isbn = $_REQUEST["isbn"];
     $crn = $_REQUEST["crn"];
 
-    /* bind parameters to prepared statement */
-    $stmt->bind_param("issii", $id, $tbTitle, $tbAuthor, $isbn, $crn);
+    /* Bind parameters to prepared statement */
+    $stmt->bind_param("ssiis", $tbTitle, $tbAuthor, $isbn, $crn, $onidid);
     $stmt->execute();
 
   $stmt->close();
