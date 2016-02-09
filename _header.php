@@ -3,7 +3,7 @@ session_start();
 
 
 function checkAuth($doRedirect) {
-	if (isset($_SESSION["onidid"]) && $_SESSION["onidid"] != "") return $_SESSION["onidid"];
+	if (isset($_SESSION["uid"]) && $_SESSION["uid"] != "") return $_SESSION["uid"];
 
 	 $pageURL = 'http';
 	 if (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
@@ -13,7 +13,8 @@ function checkAuth($doRedirect) {
 	 } else {
 	  $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["SCRIPT_NAME"];
 	 }
-
+    
+    //Problematic for logout
 	$ticket = isset($_REQUEST["ticket"]) ? $_REQUEST["ticket"] : "";
 
 	if ($ticket != "") {
@@ -22,9 +23,9 @@ function checkAuth($doRedirect) {
 		$pattern = '/\\<cas\\:user\\>([a-zA-Z0-9]+)\\<\\/cas\\:user\\>/';
 		preg_match($pattern, $html, $matches);
 		if ($matches && count($matches) > 1) {
-			$onidid = $matches[1];
-			$_SESSION["onidid"] = $onidid;
-			return $onidid;
+			$uid = $matches[1];
+			$_SESSION["uid"] = $uid;
+			return $uid;
 		} 
 	} else if ($doRedirect) {
 		$url = "https://login.oregonstate.edu/cas/login?service=".$pageURL;
@@ -46,16 +47,14 @@ function checkAuth($doRedirect) {
 </head>
 <body class="container">
 	<header>
-	<div class="page-header">
 		<h1>Text Book Site</h1>
-	</div>
 	</header>
 	<nav>
 		<ul class="nav nav-tabs" role="tablist">
 		<li class="<?php echo $homeNav?>"><a href="./home">Home</a></li> 
 		<li class="<?php echo $loginNav?>"><a href="./login.php">Login</a></li>    
-		<li class="<?php echo $dataEntryNav?>"><a href="./dataEntry">Data Entry</a></li> 
-		<li class="<?php echo $dataDisplayNav?>"><a href="./dataDisplay">Data Display</a></li> 
+		<li class="<?php echo $dataEntryNav?>"><a href="./dataEntry">Post</a></li>
+		<li class="<?php echo $dataDisplayNav?>"><a href="./dataDisplay">Recent Posts</a></li>
 		<li class="<?php echo $coolFeatureNav?>"><a href="./coolFeature">Cool Feature</a></li> 
 		</ul>
 	</nav>
