@@ -1,5 +1,5 @@
 <?php 
-	$headerTitle = "Textbook Site || Submit Textbook"; 
+	$headerTitle = "Textbook Site || Post Textbook";
 	$dataEntryNav = "active";
 ?>
 <?php include("_header.php");?>
@@ -7,7 +7,7 @@
 if (checkAuth(true) != "") {
 	?>
 
-	<h3>Data Entry</h3>
+	<h3>Post Your Textbook</h3>
 		
 	<form method="post" action="formReceive.php">
 		<div class="form-group"><label>Textbook Title:</label>

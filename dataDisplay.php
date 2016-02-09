@@ -1,9 +1,9 @@
 <?php 	
-	$headerTitle = "Textbook Site || Available Books"; 
+	$headerTitle = "Textbook Site || Recent Posts";
 	$dataDisplayNav = "active";	
 ?>
 <?php include("_header.php");?>
-	<h3>Data Display</h3>
+	<h3>Recent Postings</h3>
 		
 	<?php
 		//Create Table Head
@@ -11,6 +11,7 @@
 	echo "<thead>";
 	echo "<tr>";
 	echo "<th>Id</th>";
+    echo "<th>Posted On</th>";
 	echo "<th>Textbook Title</th>";
 	echo "<th>Textbook Author</th>";
 	echo "<th>ISBN</th>";
@@ -21,10 +22,11 @@
 	echo "<tbody>";
 		
 		//Fill Table With Contents
-		if ($result = $mysqli->query("select id,tbTitle,tbAuthor,isbn,crn,userName from tbList")) {
+		if ($result = $mysqli->query("select id,tbTitle,tbAuthor,isbn,crn,userName,date from tbList")) {
 			while($obj = $result->fetch_object()){
 				echo "<tr>";
 				echo "<td>".htmlspecialchars($obj->id)."</td>";
+                echo "<td>".htmlspecialchars($obj->date)."</td>";
 				echo "<td>".htmlspecialchars($obj->tbTitle)."</td>";
 				echo "<td>".htmlspecialchars($obj->tbAuthor)."</td>";
 				echo "<td>".htmlspecialchars($obj->isbn)."</td>";
