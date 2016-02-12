@@ -3,17 +3,18 @@
 <?php
     $uid = checkAuth(true);
 
-if ($stmt = $mysqli->prepare("insert into tbList(tbTitle,tbAuthor,isbn,crn,userName,date) values(?,?,?,?,?,?)")) {
+if ($stmt = $mysqli->prepare("insert into tbList(tbTitle,tbAuthor,isbn,crn,userName,date,location) values(?,?,?,?,?,?,?)")) {
     
 	//Set Vars
     $tbTitle = $_REQUEST["tbTitle"];
     $tbAuthor = $_REQUEST["tbAuthor"];
     $isbn = $_REQUEST["isbn"];
     $crn = $_REQUEST["crn"];
-    $date = date("m/d");
+	 $date = date("m/d");
+	 $location = $_REQUEST["location"];
 
     /* Bind parameters to prepared statement */
-    $stmt->bind_param("ssiiss", $tbTitle, $tbAuthor, $isbn, $crn, $uid, $date);
+    $stmt->bind_param("ssiisss", $tbTitle, $tbAuthor, $isbn, $crn, $uid, $date,$location);
     $stmt->execute();
 
   $stmt->close();

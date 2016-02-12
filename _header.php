@@ -62,9 +62,9 @@ function checkAuth($doRedirect) {
 	
 <?php
 	$dbhost = 'oniddb.cws.oregonstate.edu';
-	$dbname = 'katod-db';
-	$dbuser = 'katod-db';
-	$dbpass = '51NzgxrL5yIY2fdv';
+	$dbname = 'floresc-db';
+	$dbuser = 'floresc-db';
+	$dbpass = 'q5mePB5iIGP9mFwo';
 		
 	//Connect
 	$mysqli = new mysqli($dbhost, $dbname, $dbpass, $dbuser);

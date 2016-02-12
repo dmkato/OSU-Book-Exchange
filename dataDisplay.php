@@ -16,21 +16,23 @@
 	echo "<th>Textbook Author</th>";
 	echo "<th>ISBN</th>";
 	echo "<th>CRN</th>";
+	echo "<th>Location</th>";
 	echo "<th>userName</th>";
 	echo "</tr>";
 	echo "</thead>";
 	echo "<tbody>";
 		
 		//Fill Table With Contents
-		if ($result = $mysqli->query("select id,tbTitle,tbAuthor,isbn,crn,userName,date from tbList")) {
+		if ($result = $mysqli->query("select id,tbTitle,tbAuthor,isbn,crn,userName,date,location from tbList")) {
 			while($obj = $result->fetch_object()){
 				echo "<tr>";
 				echo "<td>".htmlspecialchars($obj->id)."</td>";
-                echo "<td>".htmlspecialchars($obj->date)."</td>";
+            echo "<td>".htmlspecialchars($obj->date)."</td>";
 				echo "<td>".htmlspecialchars($obj->tbTitle)."</td>";
 				echo "<td>".htmlspecialchars($obj->tbAuthor)."</td>";
 				echo "<td>".htmlspecialchars($obj->isbn)."</td>";
 				echo "<td>".htmlspecialchars($obj->crn)."</td>";
+				echo "<td>".htmlspecialchars($obj->location)."</td>";
 				echo "<td>".htmlspecialchars($obj->userName)."</td>";
 				echo "</tr>";
 			}
