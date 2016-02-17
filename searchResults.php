@@ -1,15 +1,18 @@
-<?php 	
+<?php
+if(!isset($_POST["keyword"])){
+	header("Location:dataDisplay.php");
+}
 $headerTitle = "Textbook Site || Recent Posts";
 $dataDisplayNav = "active";	
 ?>
 <?php include("_header.php");?>
-
-	<h3>Library</h3>	
+	<h3>Found:</h3>
 	<form action="searchResults.php" method="post">
 	<div>
-    		<input type="text" name="keyword" class="form-control" placeholder="Search" />
+			<button type="submit" class="btn btn-default">Back To Library</button>
 	</div>
 	</form>
+
 <?php
 //Create Table Head
 echo "<table class='table'>";
@@ -28,7 +31,7 @@ echo "</thead>";
 echo "<tbody>";
 
 //Fill Table With Contents
-if ($result = $mysqli->query("select id,tbTitle,tbAuthor,isbn,crn,userName,date,location from tbList")) {
+if($result=mysqli_query($mysqli,"SELECT * FROM tbList WHERE tbTitle LIKE '%".$_POST["keyword"]."%' or tbAuthor like '%".$_POST["keyword"]."%' or crn like '%".$_POST["keyword"]."%' ")){
 	while($obj = $result->fetch_object()){
 		echo "<tr>";
 		echo "<td>".htmlspecialchars($obj->id)."</td>";
@@ -46,4 +49,3 @@ if ($result = $mysqli->query("select id,tbTitle,tbAuthor,isbn,crn,userName,date,
 echo "</table>";
 ?>	
 
-	<?php include("_footer.php");?>

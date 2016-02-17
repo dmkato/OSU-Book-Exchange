@@ -1,4 +1,5 @@
 <?php 
+ini_set('session.save_path',realpath(dirname($SERVER['DOCUMENT_ROOT']).'./session'));
 session_start(); 
 
 
