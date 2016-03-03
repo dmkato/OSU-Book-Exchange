@@ -2,7 +2,7 @@
 if(!isset($_POST["keyword"])){
 	header("Location:dataDisplay.php");
 }
-$headerTitle = "Textbook Site || Recent Posts";
+$headerTitle = "The Oregon State Book Exchange || Recent Posts";
 $dataDisplayNav = "active";	
 ?>
 <?php include("_header.php");?>

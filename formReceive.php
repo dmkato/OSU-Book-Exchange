@@ -1,4 +1,4 @@
-<?php $headerTitle = "Textbook Site || Textbook Recieved!"; ?>
+<?php $headerTitle = "The Oregon State Book Exchange || Textbook Recieved!"; ?>
 <?php include("_header.php");?>
 <?php
     $uid = checkAuth(true);

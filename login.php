@@ -1,5 +1,5 @@
 <?php 
-	$headerTitle = "Textbook Site || Login"; 
+	$headerTitle = "The Oregon State Book Exchange || Login"; 
 	$loginNav = "active";
 ?>
 <?php include("_header.php");?>

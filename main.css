@@ -9,6 +9,10 @@ a:hover{
     color: #705050;
 }
 
+button {
+    color: #ff9833;
+}
+
 thead{
 	background-color: #ffb266;
 }

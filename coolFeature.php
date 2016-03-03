@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <?php
-	$headerTitle = "Textbook Site || Cool Feature"; 
+	$headerTitle = "The Oregon State Book Exchange || Cool Feature"; 
 	$coolFeatureNav = "active";
 ?>
 <?php include("_header.php");?>

@@ -17,7 +17,6 @@
     //Insert 1000 test Textbooks
     for ($x = 0; $x < 1000; $x++) {
         $mysqli->query("insert into tbList(tbTitle, tbAuthor, isbn, crn, date, userName, location) values('Title', 'Author', 10000 + $x, $x * 7, '$time', 'Beep', 'Bloss')");
-	
     }
     
 	printf("initialized tblist ");

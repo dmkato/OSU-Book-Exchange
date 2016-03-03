@@ -1,5 +1,5 @@
 <?php 
-	$headerTitle = "Textbook Site || Post Textbook";
+	$headerTitle = "The Oregon State Book Exchange || Post Textbook";
 	$dataEntryNav = "active";
 ?>
 <?php include("_header.php");?>
