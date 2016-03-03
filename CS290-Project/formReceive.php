@@ -10,20 +10,16 @@ if ($stmt = $mysqli->prepare("insert into tbList(tbTitle,tbAuthor,isbn,crn,userN
     $tbAuthor = $_REQUEST["tbAuthor"];
     $isbn = $_REQUEST["isbn"];
     $crn = $_REQUEST["crn"];
-    $date = date("m/d");
-    $location = $_REQUEST["location"];
+	 $date = date("m/d");
+	 $location = $_REQUEST["location"];
 
     /* Bind parameters to prepared statement */
-    $stmt->bind_param("ssiisss", $tbTitle, $tbAuthor, $isbn, $crn, $uid, $date, $location);
+    $stmt->bind_param("ssiisss", $tbTitle, $tbAuthor, $isbn, $crn, $uid, $date,$location);
     $stmt->execute();
 
-    $stmt->close();
-        } else {
-    printf("Error: %s\n", $mysqli->error);
-        
-//    //Create html page for new listing
-//    $siteId = date("m_d_H-i-s");
-//    $newFile = fopen("listing$date", "w");
+  $stmt->close();
+    } else {
+  printf("Error: %s\n", $mysqli->error);
 }
 ?>
 
