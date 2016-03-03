@@ -52,11 +52,11 @@ function checkAuth($doRedirect) {
 	</header>
 	<nav>
 		<ul class="nav nav-tabs" role="tablist">
-		<li class="<?php echo $homeNav?>"><a href="./home">Home</a></li> 
-		<li class="<?php echo $loginNav?>"><a href="./login.php">Login</a></li>    
+		<li class="<?php echo $homeNav?>"><a href="./home">Home</a></li>
 		<li class="<?php echo $dataEntryNav?>"><a href="./dataEntry">Post</a></li>
 		<li class="<?php echo $dataDisplayNav?>"><a href="./dataDisplay">Recent Posts</a></li>
-		<li class="<?php echo $coolFeatureNav?>"><a href="./coolFeature">Cool Feature</a></li> 
+		<li class="<?php echo $coolFeatureNav?>"><a href="./coolFeature">Cool Feature</a></li>
+        <li class="<?php echo $loginNav?>"><a href="./login.php">Login</a></li>    
 		</ul>
 	</nav>
 <main>

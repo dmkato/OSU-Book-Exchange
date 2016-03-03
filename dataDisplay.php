@@ -22,7 +22,7 @@ $dataDisplayNav = "active";
     echo "<tbody>";
 
     //Fill Table With Contents
-    if ($result = $mysqli->query("select tbTitle,tbAuthor,isbn,crn,userName,date,location from tbList LIMIT 30")) {
+    if ($result = $mysqli->query("select tbTitle,tbAuthor,isbn,crn,date,location from tbList LIMIT 30")) {
         while($obj = $result->fetch_object()){
             echo "<tr>";
             echo "<td>".htmlspecialchars($obj->date)."</td>";
@@ -31,7 +31,7 @@ $dataDisplayNav = "active";
             echo "<p><span>ISBN: </span>".htmlspecialchars($obj->isbn)."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
             echo "<span>CRN: </span>".htmlspecialchars($obj->crn)."</p>";
             echo "<p><span>Location: </span>".htmlspecialchars($obj->location)."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-            echo "<span>userName: </span>".htmlspecialchars($obj->userName)."</p></td>";
+            echo "<a href='secureform.php'>Contact Seller</a></p></td>";
             echo "</tr>";
         }
         $result->close();
