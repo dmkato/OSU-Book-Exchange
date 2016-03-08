@@ -31,7 +31,7 @@ $dataDisplayNav = "active";
             echo "<p><span>ISBN: </span>".htmlspecialchars($obj->isbn)."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
             echo "<span>CRN: </span>".htmlspecialchars($obj->crn)."</p>";
             echo "<p><span>Location: </span>".htmlspecialchars($obj->location)."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-            echo "<a href='secureform.php'>Contact Seller</a></p></td>";
+            echo "<a href='contactFormSend.php'>Contact Seller</a></p></td>";
             echo "</tr>";
         }
         $result->close();

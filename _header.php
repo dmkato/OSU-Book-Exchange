@@ -48,7 +48,7 @@ function checkAuth($doRedirect) {
 </head>
 <body class="container">
 	<header>
-		<h1>Text Book Site</h1>
+		<h1>Oregon State University Book Exchange</h1>
 	</header>
 	<nav>
 		<ul class="nav nav-tabs" role="tablist">
