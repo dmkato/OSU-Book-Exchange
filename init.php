@@ -2,22 +2,30 @@
 
 <!-- tbList table-->
 <?php
-	//Delete table
-	$mysqli->query("drop table tbList");
-
-	//Create table
-	if (!$mysqli->query("create table tbList(id int auto_increment, tbTitle varchar(64), tbAuthor varchar(64), isbn int, crn int, date varchar(64), userName varchar(64),location varchar(64), primary key(id))")){
-		printf("Failed ");
-	}
-
-//	//Insert test names
+    //Delete table
+    $mysqli->query("drop table tbList");
+    $mysqli->query("drop table userBook");
+    
+    
+    //Create table
+    if (!$mysqli->query("create table tbList(id int auto_increment, tbTitle varchar(64), tbAuthor varchar(64), isbn int, crn int, date varchar(64), userName varchar(64), location varchar(64), primary key(id))")){
+        printf("Failed tbList");
+    }
+    
+    //Create column 2
+    if (!$mysqli->query("create table userBook(userName varchar(64), rating int)")){
+        printf("Failed userBook");
+    }
+    
+    //Set and display time
     $time = date("m/d");    //date("m/d H:i") <- for time and date
     echo $time."    ";
     
-	$mysqli->query("insert into tbList(tbTitle, tbAuthor, isbn, crn, date, userName) values('Test Title1', 'Test Author', 123456789, 54321, '$time', 'Beep')");
-	$mysqli->query("insert into tbList(tbTitle, tbAuthor, isbn, crn, date, userName) values('Calculus for losers', 'Professor Dumbledoor', 123453789, 54321, '$time', 'Bop')");
-	$mysqli->query("insert into tbList(tbTitle, tbAuthor, isbn, crn, date, userName) values('Ween', '400', 70, 54320, '$time', 'Boop')");
-	$mysqli->query("insert into tbList(tbTitle, tbAuthor, isbn, crn, date, userName) values('Test Title3', 'Test Arthor', 123452789, 54621, '$time', 'Beep')");
-	
-	printf("initialized tblist ");
-?>
+    //Insert 1000 test Textbooks
+    for ($x = 0; $x < 1000; $x++) {
+        $mysqli->query("insert into tbList(tbTitle, tbAuthor, isbn, crn, date, userName, location) values('Title', 'Author', 10000 + $x, $x * 7, '$time', 'Beep', 'Bloss')");
+        $mysqli->query("insert into userBook(userName, rating) values('Beep', 0)");
+    }
+    
+    printf("initialized tblist ");
+    ?>
