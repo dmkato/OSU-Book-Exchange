@@ -21,15 +21,12 @@
     } else {
         printf("Error: %s\n", $mysqli->error);
         
-        //    //Create html page for new listing
-        //    $siteId = date("m_d_H-i-s");
-        //    $newFile = fopen("listing$date", "w");
     }
     ?>
 
 <h3>Saving your submission...</h3></br>
 <div class="panel panel-default"><div class="panel-body">
-<p>Thanks for posting your textbook to [Insert whatever we call this site here]!</p>
+<p>Thanks for posting your textbook to The Oregon State Book Exchange!</p>
 <p>When someone wants to buy it, you'll recieve an email alert!</p>
 </br>
 <p><a href="./dataDisplay.php" role="button" class="btn btn-info">View results.</a></p>

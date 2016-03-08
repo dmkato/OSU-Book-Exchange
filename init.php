@@ -13,7 +13,7 @@
     }
     
     //Create column 2
-    if (!$mysqli->query("create table userBook(userName varchar(64), rating int)")){
+    if (!$mysqli->query("create table userRating(userName varchar(64), rating int)")){
         printf("Failed userBook");
     }
     
@@ -24,7 +24,7 @@
     //Insert 1000 test Textbooks
     for ($x = 0; $x < 1000; $x++) {
         $mysqli->query("insert into tbList(tbTitle, tbAuthor, isbn, crn, date, userName, location) values('Title', 'Author', 10000 + $x, $x * 7, '$time', 'Beep', 'Bloss')");
-        $mysqli->query("insert into userBook(userName, rating) values('Beep', 0)");
+        $mysqli->query("insert into userRating(userName, rating) values('Beep', 0)");
     }
     
     printf("initialized tblist ");

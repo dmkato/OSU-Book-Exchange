@@ -7,4 +7,4 @@
 
 <div class="panel panel-default"><div class="panel-body">Logged out!</div></div>
 
-<?php include "_footer.php"?>
+<?php include ("_footer.php"); ?>
