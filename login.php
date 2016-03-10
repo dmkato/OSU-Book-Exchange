@@ -7,10 +7,10 @@
 
 <h3>Account Information</h3></br>
 <div class="panel panel-default"><div class="panel-body">
-<p><?php echo "$uid"; ?></p>
+<h4><?php echo "$uid"."'s Posts"; ?></h4></br>
 
 <?php
-    //Create Table Head
+    //User Textbook Table
     echo "<table class='table' id='userTable'>";
     echo "<thead>";
     echo "<tr>";
@@ -38,15 +38,13 @@
             echo "<td>".htmlspecialchars($isbn)."</td>";
             echo "<td>".htmlspecialchars($crn)."</td>";
             echo "<td>".htmlspecialchars($location)."</td>";
-            echo "</tr></tbody>";
-        } 
-        
+            echo "</tr>";
+        }
         $stmt->close();
     }
-    
+    echo "</tbody></table>";
 ?>
 
-<p><a href="logout.php" role="button" class="btn btn-default">logout?</a></p>
 </div></div>
 
-<?php include("_footer.php");?>
+<?php include("_footer.php"); ?>

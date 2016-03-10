@@ -1,7 +1,7 @@
 <?php
     $headerTitle = "The Oregon State Book Exchange || Contact Seller";
     $dataEntryNav = "active";
-    ?>
+?>
 <?php include("_header.php");?>
 <?php
     if (checkAuth(true) != "") {
@@ -18,7 +18,8 @@
         <input type="text" class="form-control" name="emai"></div>
     <div class="form-group"><label>Message</label>
         <textarea type="text" class="form-control" name="message" rows="5" cols="30"></textarea></div>
-    <div><input type="submit" class="btn btn-default"></div>
+        <input type="hidden" name="sellerId" value="<?php echo $_POST['sellerId']?>">
+    <div><input type="submit" class="btn btn-default" name="submit"></div>
 </form></br>
 
 <?php

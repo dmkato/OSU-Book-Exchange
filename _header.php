@@ -34,9 +34,19 @@
         }
         return "";
     }
+?>
+<script>
+function postUserName($userId){
+    alert();
+    $_POST["SellerId"] = $userId;
+    window.location = "contactFormSend.php";
+}
+
+function showMorePosts(){
+    var table = document.getElementById("postTable");
     
-    
-    ?>
+}
+</script>
 
 <html><head>
 <title><?php echo $headerTitle; ?></title>
